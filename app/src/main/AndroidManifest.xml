@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.papaya.lenovo"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:name="com.papaya.jack.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.papaya.jack.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--1.启动servier 端服务，注册Server到ServiceManager-->
+        <service android:name="com.papaya.jack.service.MyService">
+            <intent-filter>
+                <action android:name="com.papaya.ACTION_TESTAIDL"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
